@@ -1,0 +1,131 @@
+/* 学习html+css第二课
+ 日期：2018-7-8 */
+ 
+ 
+ *{
+	 padding:0px;
+	 margin:0px;
+	 font-family:arial;
+	 color:#424242;/* 标准黑色*/
+ } 
+ /**margin塌陷*/
+ .wrapper{
+	margin-top:100px;
+	margin-left:100px;
+	width:100px;
+	height:100px;
+	background-color:black;
+	/* float:left; */
+	/* overflow:hidden; */ 
+	/* position:absolute; */
+	
+}
+.content{
+	margin-left:50px;
+	margin-top:50px;
+	width:50px;
+	height:50px;
+	background-color:green;
+} 
+/* .box1{ */
+	/* width:100px; */
+	
+/* } */
+
+/*margin合并,不解决，以大的个数字算**/
+.box1{
+	margin-bottom:100px;
+	background-color:green;
+}
+.box2{
+	margin-top:150px;
+	background-color:red;
+}
+
+/**浮动**/
+.wrapper1{
+	/* width:350px; */
+	/* height:300px; */
+	border:1px solid black;
+}
+.content1{
+	width:100px;
+	height:100px;
+	margin-left:10px;
+	margin-top:10px;
+	background-color:#f40;
+	float:left;
+	/* 浮动元素,方块可以自由浮动 */
+}
+/*解决容器的边框包含里面的元素，不能用*/
+.clearfd{
+	border-top:0px solid green;
+	clear:both;  /*清除浮动流,clear只能清除块级*/
+}
+/* position:absolut;float:left/right;在内部把元素自动转换成inline-block; */
+
+
+/**伪元素，天生就存在*/
+span::before{
+	content:"逻辑前面";  /* content只能用在伪元素里面好用 */
+}
+span::after{
+	content:"逻辑的后面";
+}
+
+/*天猫*/
+a{
+		text-decoration:none;
+}
+ul{
+	list-style:none;
+
+}
+.nav::after{	/**清除浮动流*/
+	content:"";
+	display:block;
+	clear:both;
+	
+}
+.list-item{
+	float:left;
+	margin:0 5px;
+	height:30px;
+	line-height:30px;
+}
+.list-item a{
+	color:#f40;
+	font-weight:bold;
+	/* padding:0 10px; */
+	display:block;
+	border-radius:15px;
+}
+.list-item a:hover{
+	color:#fff;
+	background-color:#f40;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+﻿<html lang="en,zh">  <!-- 根标签 ,lang:en/zh，de 告诉搜索引擎爬虫，我们的网站关于什么的内容-->
+<!-- 关键字协议 -->
+<!-- <meta  content="服装 name = "keywords"> -->
+<!-- <meta content = "描述信息" neme = "description"> -->
+<head>
+	<meta charset="UTF-8"> <!-- jb2312  gbk(包含繁体) unicode=> utf-8  -->
+	<title>html 4.01基础</title>
+
+</head>
+<body>
+
+	<p>hypetText markup language 超文本标记语言</p>
+
+
+	<p>段落标签</p>
+	<h1>标题标签，加粗，独占一行</h1>
+	<em>斜体</em>
+	<strong>加粗</strong>
+	<address>address，地址标签，独占一行</address>
+	原价：<del style="color:#999">879</del>
+	<div>div</div>div
+			<!-- div容器，span,div独行展示，span没有其他的-->
+	<span>span</span>
+
+	<p>空格和回车都是文本风格符</p>
+	&lt;：小于 &nbsp;&nbsp;&nbsp;&nbsp;//空格&gt;：大于<br/>   <!-- html编码 lass than ,great than-->
+	a<br/>回车标签-单标签b<br/>
+	<hr />-hr水平线标签
+	<br />br换行标签
+
+	<ol type="a" reversed="reversed">有序列表,倒序
+			<!-- type只能填a,1,i,A, start 表示从第几个开始排序-->
+		<li></li>	
+		<li></li>
+	</ol>
+	<hr>
+	<ol type="1" start="4" >有序列表,从4开始排序
+		<li></li>	
+		<li></li>
+	</ol>
+	<ul type="circle">-type="disc/cirle/square"无序列表,只有一个属性默认是实心园，经常用，父子结构，导航栏
+		<li>你好</li>
+		<li>你好</li>
+		<li>你好</li>
+	</ul>//ul的父子结构功能很好
+
+	每次编程都把ul的点去了 .ul{
+	list-style : none;
+}
+	把ul前面的空隙去了
+	* {
+	margin : 0;
+}
+
+	让li横过来 li{
+	margin :  0 10px;  
+	float : left;
+}
+
+
+	<hr/	>
+	<img src="	g:/image/ym.jpeg" 			style="width:400px;"alt="霓虹" title="图片提示符"/>source,image，<br>
+	alt:图片站位符，当图片路径出错就显示alt的信息<br />
+	1.网上的url<br>
+	2.本地的绝对/相对路径
+	
+	<!-- hyperText reference:超文本引用 -->
+
+<a href="https://www.baidu.com" target="_blank"> www.buidu.com这是给用户看的，超链接</a><br>
+	<a>anchor:锚点1.描点,双击可以回到某点，2.超链接，3.打电话。4.协议限定符，记录位置target="blank"在一个新的空标签打开，
+	<a href="tel:1838532873" >打电话</a>
+	<a href="mailto:">发邮件</a><br>
+	<a href="javascript:while(1){alert('点吧'')}">协议限定符,点击时运行javascript代码</a>	
+	<a href="https://www.baidu.com" target = "blank">
+		<img src="	g:/image/ym.jpeg" style="width:400px;"alt="霓虹" title="图片提示符"/>
+	</a>
+
+	<div id="demo1" style="hegight:100px;width:100px;background-color: green;">demo1</div>
+	<div id="demo2" style="hegight:100px;width:100px;background-color: red;">demo2</div>
+	<a href="#demo1">实现跳转到demo1</a>
+	<a href="#demo2"></a>
+
+
+
+	
+	<hr/>
+
+	from input select 都是行内元素
+
+	from 表单标签，将前端的数据发送给后端，method="get/post"发送数据的方式,action发送给谁
+	<form method="get/post" action="">from标签发送数据，数据名name，数据值value<br />
+
+		必须要有数据名，不然提交不成功
+		<p>
+			用户名:<input type="text" name="username" value="请输入用户密码" ><!--text输入框，是一个组件
+			name指明提交的是啥，不写是不可以的，md5加密，不可逆-->
+			<!-- 3g和4g网区别是完全性，抓包工具 -->
+		</p>
+		<p>
+			密码:<input type="password" name="password">password密码输入框 
+		</p>
+		<p>
+			单选框1<input type="radio" name="1" value = 'ch.value1' checked="checked">
+			单选框2<input type="radio" name="1" value="ch.value2">name说明在同一个选项框里，
+				选项框里要有value，说明提交的值
+		</p>
+		<p>
+			单选框3<input type="radio" name="2" value = 'chooice.value3'>
+			单选框4<input type="radio" name="2" value="chooice.value4">name说明在同一个选项框里
+		</p>
+		
+		<!-- 产品要符合用户特点，有些东西选择默认的就好，如果全部都让用户选择肯定不好，
+		体验（培养用户懒操作习惯），联系， -->
+		<p>
+			复选框1<input type="checkbox" name="3" value="c1" checked="checked"  ><!--checked默认选中-->
+			复选框2<input type="checkbox" name="3" value="c2">
+		</p>
+		<p>
+		
+		</p>
+		
+		<h3>select下拉菜单</h3>
+		<select name="xuanxiang">
+			<option>beijing</option><!-- option包含的值其实就是value -->
+			<option>shanghai</option>
+			<option>guiyang</option>
+			<option>yunnan</option>
+		</select>
+
+		<input type="submit" value="登录"> <!-- 提交数据之后？后面什么都没有表示没有提交成功，submit：提交 -->
+	</form>
+浏览器，1，市场份额，2，shell部分,内核部分，独立研发的内核
+	内核部分
+		渲染引擎、
+		js引擎
+		其他模块
+		
+		2001年发布ie6，首次实现对js引擎的优化
+		2008年Google发布最新浏览器Chrome,它是采用优化的javascript引擎，引擎代号V8，因能把js代码直接转化为机械码来执行，进而以速度快而闻名
+
+
+
+
+
+</body>
+</html>

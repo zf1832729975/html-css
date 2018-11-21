@@ -1,0 +1,116 @@
+<!-- 
+ 学习html+css第二课
+ 日期：2018-7-8 -->
+ <html>
+ <head lang = "zh">
+	<meta charset = "utf-8">
+	<title>css第二课</title>
+	<link type = "text/css" rel = "stylesheet" href = "cssBase2.css" />
+	<img>
+ 
+ </head>
+ <body>
+
+
+	<!-- margin塌陷，如何触发一个盒子的bfc
+	都有缺陷
+	一个盒子的top不能相对于父级移动时 ,父级这样定义就可以了，其中一个就行了
+		position:absolute;
+		display:inline-block;
+		float:left/right;
+		overflow:hidden;一个盒子的溢出部分不显示
+		
+		
+		
+	margin合并，两个块元素的底与顶没有相加，取决于大的个，
+	不解决	不能为了解决bug而改htMl的结构，结构最重要
+		
+	-->
+	
+	<!-- float:浮动，可以让文字环绕图片
+		1.浮动元素产生了浮动元素
+		所有产生的浮动流的元素，只有块级元素看不到他们，那么他们的位置将被占用--
+		产生了bfc的元素和文本类属性（inline）的元素以及文本图像都能看到浮动元素
+		
+		父级元素的边框包不住它里面的浮动元素，在最后的一个标签里加上p标签，而给p标签加上属性clear（清除两边的浮动流）-->
+	<!-- margin塌陷	 -->
+	 <div class = "wrapper">
+		<div class = "content"></div>
+	</div>
+	
+	<h4>margin合并</h4>
+	<div  class = "box1">1234</div>
+	<div class = "box2">567</div>
+ 
+<!--  <div class = "box1">1</div>
+ <div class = "box2">2</div> -->
+	
+	<h5>浮动float:left/right</h5>
+
+	 <div class = "wrapper1">
+		<div class = "content1">1</div>
+		<div class = "content1">2</div>
+		<div class = "content1">3</div>
+		<div class = "content1">4</div>
+		<div class = "content1">5</div>
+		<div class = "content1">6</div>
+		<div class = "content1">7</div>
+		<div class = "content1">8</div>
+		<div class = "content1">9</div>
+		<!-- /*解决容器的边框包含里面的元素，不能用，应该用clear清除浮动流*/ -->
+		<p class = "clearfd"></p>  <!-- 这就加了一个结构，不能用 -->
+
+	<!-- 	清除浮动流
+
+	.wrapper::after{
+		content:"";
+		clear:both;
+		display:block; 必须要加，要让clear生效，它必须作用在块元素上
+	}
+ -->
+	</div>
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <h5>伪元素</h5>
+	  <!-- ::after,::before 伪元素存在于任意的元素、标签中，可以当元素，但没有元素结构，伪元素天生是行级元素，想改宽高属性要改成块级元素 -->
+	<span>
+	
+		逻辑	
+	</span>
+	<ul class = "nav">
+		
+		<li class = "list-item">
+			<a href = "https://www.tmall.com" target = "blank" >天猫</a></li>
+		<li class = "list-item">
+			<a href = "https://www.jd.com" target = "blank">京东</a></li>
+		<li class = "list-item">
+			<a href = "https://www.taobao.com/" target = "blank" >淘宝</a></li>
+		<li class = "list-item">
+			<a href = "javascript:while(1){after('wait')}">js代码</a></li>
+	</ul>fdakfjadflaf
+	
+ 
+ 
+ 
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

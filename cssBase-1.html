@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title> cascading style sheet </title>
+    <!--<style type="text/css">
+        div {
+            这是第二种方法
+        }
+    </style>-->
+    <link href="cssBase1.css" rel="stylesheet" type='text/css'>-><!-- 引入css文件 -->
+</head>
+<body>
+    <h5>cascading style sheet层叠样式表</h5>
+    <!-- <!-引入css -->
+    <!-- 1.行间样式<div style="这里就是css"></div>     -->
+    <!--2.页面级css在head标签里写-->
+    <!--3.外部css文件，最适用-->
+	<!-- 选择器 -->
+    <!--3.1.标签选择器，所以的标签都被运用-->
+    <!-- 5.class,6.属性[id="only"]|[only]，7，通配符*，所有的标签都被作用 -->
+	
+    <!-- 	仔细的选择器
+    0.id选择器
+	1.标签选择器
+	2.属性选择器
+	3.父子选择器
+	4.直接子元素选择器
+	5.并列选择器
+	6.分组选择器
+	7.伪类选择器 
+	8.通配符选择器-->
+
+	<!-- 	选择器
+    0.id选择器
+	1.标签选择器
+	2.属性选择器
+	4.通配符选择器-->
+
+
+
+
+
+    <!--!important>行间样式 > id > class|属性 > 标签选择器>通配符-->
+	
+	<!-- 行间样式直接写在style里 
+	
+	!important		Infinity
+	行间样式		1000
+	id				100
+	属性|伪类|class	10
+	标签|伪元素		1
+	通配符			0	-->
+	
+    <div id="only" class="demo">123</div>
+    <div class="demo">425</div>
+	<ul>
+		
+		<li> 1</li>
+		<li> 1</li>
+		<li> 1</li>
+		<li> 1</li>
+		<li> 1</li>
+		<li> 1</li>
+	</ul>
+	
+	<!-- 访问网页其实就是把html发送到用户的电脑上，同时去下载css，异步方式，计算机里的同步和异步和生活中的是相反的 -->
+	
+
+	www.baidu.com --> dns --> 192...
+
+
+	练习
+	<div>
+		<span>你好</span>
+	</div>
+	<span> 发达的九分</span>
+	<a href="https://www.baidu.com">www.baidu.com</a>
+	
+	<!-- 1.行级元素 inline
+	featrue： 内容决定元素的位置，不可以通过css改变宽高
+	span strong em a del input from seclect
+	
+	2.块级元素 block 
+	featrue: 独占一行可以通过css改变宽高
+	div p ul li ol form address
+	
+	3.行级块元素  inline-block
+	featrue: 内容决定大小，可以改变宽高
+	img 带有文字特性(图片)之间有空隙,解决图片中间的间隙，就是不能有换行,几个img
+	挨着写
+	<img....><img ....>
+	
+	display:设置标签的元素特点
+	-->
+	
+	<!-- 写前端思想
+	先写css,再写html -->
+	
+	
+
+	<!-- 盒子模型
+	外边距		margin
+	盒子壁  	border
+	内边距  	 padding
+	盒子内容	width+height;	
+	 -->
+	<div class="wrapper">
+		<div class="content">
+			
+		</div>
+
+	</div>
+	
+	<!-- 定位技术
+	
+	
+	body的margin是8px;
+	position:absolute，绝对，脱离原来的位置定位，后面的就可以往上窜，定位的这个元素会上移动一层
+多层嵌套absolute:相对于最近的有父级定位的进行定位，如果没有，那么相对于文档进行定位
+
+ 层模型 
+	
+	relative:相对，保留原来位置定位。21g,
+	relative:相对于自己原来的位置进行定位
+	
+	定位规律
+	用absolute做定位
+	用relative做参照物，做机架
+	 -->
+	<div class="ding-wei">
+	
+	</div>
+	<div class="guanggao">广告不动，居中</div>
+
+	<!-- z-index:设置在第几层，默认是0层 -->
+	
+	<div class="drawcircle">画圆</div>
+	作业，画5环，永远在屏幕中间
+	
+	
+	
+	
+
+</body>
+</html>
+
+
+
+
+

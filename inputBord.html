@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>输入对话框</h1>
+<form methon="get" action="">	
+	<p>
+		用户名:<input type="text" name="username"  
+		style="color:#999;border:2px solid red;border-radius:10px;padding-left:10px;" value="请输入用户名"
+		onfocus="if(this.value == '请输入用户名'){this.value = ''; this.style.color = '#444'}"
+		onblur = "if(this.value == ''){this.value = '请输入用户名';this.style.color = '#999'}">
+		
+	</p>
+
+	<p>	
+		密码:<input type="password" name="password" value="">	
+	</p>
+	
+	 
+	
+	<p>
+	<input type="submit"  value="登录">	
+	</p>	
+
+	
+	<!-- onfocus="if(this.value=='请输入用户名'){this.value='';this.style.color='#245'}" -->
+	<!-- onblur="if(this.value==''){this.value='请输入用户名';this.style.color='#999'}"> -->
+	
+</form>
+
+<!--onfocus：得到焦点，onblur:失去焦点,methon:数据发送方式， action:数据接收方地址--->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

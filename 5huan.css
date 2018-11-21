@@ -1,0 +1,43 @@
+/* ***********
+ *程序：画5环，在整个屏幕不动，且居中
+ *作者：周飞
+ *日期：2018-7-7 
+ *********/
+/*  *{
+	margin:0px;
+	padding:0px;
+ }  */
+ .circle{
+	 width:100px;
+	 height:100px;
+	 position: absolute;
+	 border-radius:50%;
+ }
+ .centerblack{
+	  border:10px solid black;
+	  left:50%;
+	  top: 50%;
+	  position: fixed;
+	  margin-left:-60px;
+	  margin-top : -85px;
+	  
+ }
+ .blue{
+	 border:10px solid blue;
+	  right:110px;
+}
+ .yellow{
+	  border:10px solid yellow;
+	  right:50px;
+	  top:50px;
+ }
+
+  .red{
+	  border:10px solid red; 
+	  left:110px;
+ }
+  .green{
+	  border:10px solid green;
+	  left:50px;
+	  top:50px;
+ }

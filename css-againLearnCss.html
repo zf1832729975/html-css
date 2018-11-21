@@ -1,0 +1,345 @@
+<!-- 时间：2018-9-12 -->
+<!-- 再次学习HTML、css总结 -->
+
+<html leng="zh">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+行级元素 a  b span input strong em  del from seclect
+块级元素 br div p ul li ol  address h1-h5 
+
+	去ul标签的圆点用list-style:none;去a标签的下划线用text-decoration : none
+
+//字体  - 文本
+	font-size:30px;
+	font-style:normal;
+	font-weight : bold(600) | 100 - 900  字体粗细
+	font-family :normal | italic | oblique;字体样式
+	color:字体颜色
+	background-color:背景颜色 
+
+	、、单行文本在容器中垂直居中 ==> 单行文本高度=容器高度
+		<style type="text/css">
+			div{
+				border:1px solid black;
+				text-indent:2em;	[ɪnˈdent] 缩进
+				text-align:center;   [əˈlaɪn] 对齐方式
+				height:100px;
+				line-height: 100px;
+			}
+			span{
+				text-decoration: none |underline |overline;  
+				decoration:[ˌdekəˈreɪʃn]  文本装饰
+				underline ： 下划线
+				overline : 上划线
+				onoe : 没有装饰，a标签常用的去掉下划线
+
+				cursor :;当光标移上去之后光标的变化
+			}
+		</style>
+
+	、、文本首行缩进 text-indent:2em;
+
+
+//伪类选择器 
+		最常用的
+		a:hover{
+
+	}
+
+
+//border
+	border : 10px solid black;  复合属性
+	border:border-width  border-style border-color;
+	border-style : dotted;点装虚线 dashed 条状虚线
+	border-left
+
+
+	//画三角形
+
+	<style type="text/css">
+		div{
+			width: 0px;
+			height :0px;
+			border:100px solid white;  /*transparent透明的*/
+			border-left-color: red;
+		}
+
+	</style>
+
+// 块级元素    display  : 显示 
+	
+//盒模型
+	画嵌套的圈
+	<div class="wrapper">
+		<div class="box">
+			<div class="centent">
+				<div class="content1"></div>
+			</div>
+		</div>
+	</div>	
+
+	<style type="text/css">
+		.content1{
+			height: 10px;
+			width: 10px;
+			border-color: green;
+		}
+		.centent{
+			width: 10px;
+			height: 10px;
+			padding: 10px;
+			background-color: #fff;		
+		}
+		.box{
+			width: 30px;
+			height: 30px;
+			padding: 10px;
+			border-color: green;
+		}
+		.wrapper{
+			width: 50px;
+			height: 50px;
+			padding: 10px;
+			border-color: black;
+		}
+
+
+	</style>
+
+//定位技术
+
+	position : absolute | relative | fixed;
+	left | top : 边线距屏幕边线的距离
+
+	absolute ：
+	1.绝对定位，脱离原来的位置定位，其他后面的元素可以往上窜，在不同的层面上
+	2.相对于最近的有定位的父级进行定位，如果没有，那么相对于文档定位
+	3.如果没有写top和left；那么它的位置不会变，只写其中一个，那么它之后移动这个的距离，其他的都不变
+	relative ：
+	1.相对定位，保留原来的位置定位，以前它占位置的不能被其他元素占用，其都可以移动，
+	2.相对于自己原来的位置进行定位
+
+	relative : 当机架     absolute ： 当定位
+
+	fixed : 固定定位
+
+	//永久中屏幕中央
+	div{
+		position : fixed;//如果是absolute的话会移动
+		left:50%;
+		top:50%;
+		width:100px;
+		height:100px;
+		background-color:red;
+		margin : -50px 0 0 -50px;
+	}
+
+	//两栏布局
+
+	<div class="right"></div> //必须先写right
+	<div class="left"></div>
+	.right{
+		position : absolute;
+		right:0;
+		width:100px;
+		height:100px;
+		background-color:red;
+	}
+	.left{
+		margin-right:100px;  //把它占用的right那个div的位置让出来
+		height:100px;
+		background-color:black;
+	}
+
+
+//浮动元素	
+	可以让方块排队
+	1.浮动元素产生了浮动流
+
+	所有产生了浮动流的元素，只有块级元素看不到他们
+	产生了bfc的元素和文本类属性的元素以及文本都能看到浮动元素
+
+	父级块元素包不住浮动元素
+		因为父级元素是浮动元素，看不见浮动元素
+		1.清除浮动流
+		2.把父元素改成看得见浮动元素的
+
+	清除浮动流
+
+	.wrapper::after{
+		content:"";
+		clear:both;
+		display:block; 必须要加，要让clear生效，它必须作用在块元素上
+	}
+
+
+<h5>伪元素</h5>
+	  <!-- ::after,::before 伪元素存在于任意的元素、标签中，可以当元素，但没有元素结构，伪元素天生是行级元素，想改宽高属性要改成块级元素 -->
+
+导航栏
+
+	<ul class="nav">
+		<li class="list-item">
+			<a href="#">天猫</a>
+		</li>
+		<li class="list-item">
+			<a href="#">天猫</a>
+		</li>
+		<li class="list-item">
+			<a href="#">天猫</a>
+		</li>
+	</ul>
+
+	<style type="text/css">
+		
+	*{
+			margin: 0px;
+			padding: 0;
+			color:#424242;
+		}
+		a{
+			text-decoration: none;
+		}
+
+		.nav{
+			list-style:none;/*去圆点*/
+		}
+		.nav::after{
+			content: "";
+			display: block;
+			clear:both;
+		}
+		.nav .list-item{
+			float:left;
+			margin: 0 10px;
+			line-height: 30px;
+			/*height:30px;
+			
+			border:1px solid black;*/
+			font-weight: bold;
+
+		}
+		.nav .list-item a{
+			color:#f40;
+			height: 30px;
+			display: block;
+			padding: 0 10px;
+
+		}
+		.nav .list-item a:hover{
+			color: #fff;
+			background-color: #f40;
+			border-radius: 10px;
+		}
+
+
+
+	</style>
+
+
+//打点显示	
+	1.单行文本
+	<style type="text/css">
+		p{
+			width: 300px;
+			height: 20px;
+			line-height: 20px;
+			white-space: nowrap; /*不换行*/
+			overflow:hidden;
+			text-overflow: ellipsis;/*文本溢出的：打点显示*/
+		}
+	</style>
+	2.多行文本，直接打点
+
+//背景图片
+
+	<style type="text/css">
+		.bj{
+			background-image: url();
+			background-size: 100px 100px;
+			background-repeat: no-repeat;/*是否重复*/
+			background-position: 100px 100px;
+		}
+	</style>
+
+//背景图片和文字
+	<a href="">淘宝网</a>
+	<style type="text/css">
+		a{
+			display: inline-block;
+			text-decoration: none;
+			color:#f424242;
+			width:190px;
+			height: 0;
+			padding: 90px;
+			overflow: hidden;
+			background-image: url();
+			background-position: 190px 90px;
+		}
+
+
+	</style>
+
+//行级元素只能嵌套行级元素 块级元素可以嵌套任何元素
+	1.但是有特例，p标签里不能嵌套div
+	2.a标签里不能嵌套a标签
+
+再总
+	文本	 .text{
+		text-decoration:none | underline | overline;
+		text-align: center | right | left;
+		text-indent:2em;
+		font-weight: bold(600) | 100 - 900;字体粗细
+		font-style: normal | italic | oblique;  字体样式
+		color:字体颜色;
+
+	}
+
+
+	.border{
+		border-style:dotted | dashed | solid;
+	}
+
+
+	.position{
+		position: absolute | relative |　fixed;
+
+	}
+
+	absolute: 绝对定位， 相对于最近的父级有定位的进行定位
+	1.如果没有最近的有定位的父级那么久相对于文档就行定位
+	2.如果只写了一个定位position : absolute，而没有写其他的right left top bottom 那么它将不会移动
+	3.脱离原来的位置进行定位，后面的元素会往上窜
+
+	relative : 相对定位， 相对于自己原来的位置进行定位，且保留自己原来的位置不会出现其他元素往上窜
+
+	absolute | relative 都会上移动一层
+	fixed : 国定永远不动
+
+ 	relative : 机架
+ 	absolute ： 定位
+
+
+ 	浮动元素
+ 	float ： left | right
+ 	如果是这个nav导航栏有浮动
+ 	那么 nav :: after{
+ 		content: "";
+ 		display: black; 要想清除浮动流就必须是块元素其他元素不行
+ 		clear:both;
+ 	}
+
+
+
+
+
+
+
+
+
+</body>
+</html>

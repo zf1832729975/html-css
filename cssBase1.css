@@ -1,0 +1,147 @@
+﻿/* www.css88.com:css/签订参考手册 ，css只有一种注释*/
+#only { id号
+    background-color: yellow;
+}
+.demo{  /* class选择器 */
+    background-color: #baa;
+	font-size:16px;/* 默认互联网字体大小是16px,但一般用的是12和14 ,
+	设置字体的大小其实设置的是字体的高*/
+	/* font-weight:bold/lighter/normal/border|100 200 -- 900; */
+	/* 属性名：属性值 */
+	font-style:italic;
+	font-family:arial;	/* 最通用的字体，乔布斯开发的 */
+	color:#F40;		/* 颜色总共6位，如果每两位都是重复的可以简写如ffeebb可以写成feb,还可以写成color:rgb(0-255,0-255,0-255) */
+	border:1px solid black;	/*厚度，样式，颜色*/
+	text-align:center;/*对齐方式*/
+	/*加外边框，transpa：透明色，可以画三角*/
+	line-height:10px; /*行高，文本=容器高度height=line-height，文字就居中了*/
+}
+[id/class]{ 	/* 属性选择器，通过相同的属性来获得操作 */
+	/* 还可以写成id/class = "选择的那个号" */
+	
+}
+div{
+    /* background-color: green; */
+	text-indent:2em;/*indent:缩进*/
+	/* 1em = 该标签的1个font-size */
+	text-decoration:none;
+	/* cursor:	copy;	/*光标,value:pointer,help,copy*/ */
+}
+/* 父子选择器 */
+div span{ /* 父子选择器，间接的都可以，用什么表示都可以，不一定要用标签选择器 */
+	/* background-color:red; */
+}
+/* 直接子元素选择器 */
+div > em{
+
+}
+/* 并列选择器 */
+div.demo{  /* 又是div又是类demo */
+
+}
+/* 分组选择器，共用一个代码块 */
+/* em,
+strong,
+span{
+
+}
+ */
+/* roseOnly花，一生只能买一次给一个人 */
+/* darryRing砖石，一生只卖给一个人一次，碳，晶核色阶，d e f -- z，依次到低 */
+
+
+/*伪类选择器*/
+a:hover{	/*当光标移动上去时的变化*/
+	background-color:#f40;
+	color:#fff;
+	font-weight:bold;
+	font-family:arial;
+	border-radius:10px;
+	text-decoration:none ;  /* none,去掉下划线decoration：装饰 */	
+	
+}
+
+ul li{
+	display:inline-block;
+}
+ul{	/*在开发中一般都把ul的圆点去了*/
+	list-style:none;
+	/* padding:0; */
+	/* margin:0; */
+}
+/*初始化所有的标签*/
+/* *{
+ 	padding:0;
+	margin:0;
+}
+ */
+
+
+
+
+.wrapper{
+	border:10px solid green;
+	width:100px;
+	height:100px;
+	background-color:red;
+	padding:100px;
+	padding-top:100px;
+	padding:100px 100px 100px 100px;/* 上右下左顺序 */
+
+}
+/*它作为wrapper的内容*/
+.content{
+	width:100px;
+	height:100px;
+	background:black;
+}
+
+.ding-wei{
+	position:absolute;
+	left:100px; /* 距离的是边线 */
+	top:100px;
+	width:100px;
+	height:100px;
+	background:gray;
+	opacity:0.5;  /*透明度*/
+}
+.guanggao{
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:100px;
+	height:100px;
+	background:blue;
+	opacity:0.5;
+	margin-left:-50px;
+	margin-top:-50px;
+}
+
+.drawcircle{
+	width:100px;
+	height:100px;
+	border: 10px  solid black;
+	border-radius:50%;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

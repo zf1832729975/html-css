@@ -1,0 +1,72 @@
+/*  css2.0第三课
+ 日期：2018-7-9 */
+*{
+	padding:0px;
+	margin:0px;
+}
+/*单行文本溢出不显示*/
+.dhyc{
+	width:300px;
+	height:20px;
+	/* border:1px solid green; */
+	white-space: nowrap;	/* 将文字单行显示，不换行 */
+	overflow:hidden;	/*溢出部分不显示*/
+	text-overflow:ellipsis;/*文本溢出部分点点点，ellipsi椭圆*/
+}
+.dhcd{
+	width:300px;
+	line-height:20px;
+	height:40px;
+	overflow:hidden;/*hidden隐藏的*/
+}
+/* 容器里放背景图片 */
+.bjtp{
+	width:200px;
+	height:200px;
+	background-color:#edc;
+	border:1px solid black;
+	background-image:url(img/zly.jpg);/*背景图片，放的url，像一些字的图片一般都是用这个*/
+	background-size:100px 100px; /*默认图片会填充完整个屏幕*/
+	background-repeat:no-repeat;/*属性值：no-repeat不重复出现，repeat重复出现，repeat-x在x轴上重复出现*/
+	background-position:center center;/**图片位置，value:intger,center,top,left,right*/
+}
+/*网不好是解决，好时又不一样*/
+.taobao1{
+	display:inline-block;
+	text-decoration:none;
+	width:190px;
+	height:90px;
+	/* border:1px solid black; */
+	background-image:url(http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png);
+	background-size:190px 90px;
+	text-indent:300px;/*首行缩进*/
+	white-space:nowrap;/*不换行*/
+	overflow:hidden;
+}
+.taobao2{
+	display:inline-block;
+	
+	width:190px;
+	height:0px;
+	/* border:1px solid black; */
+	background-image:url(http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png);
+	background-size:190px 90px;
+	overflow:hidden;
+	padding-top:90px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
